@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.wrapper {
+  float: left;
+  width: 49%;
+  margin-bottom: 1%;
+}
+.wrapper:nth-of-type(3), .wrapper:nth-of-type(2n + 6) {
+  margin-right: 2%;
+}
+.wrapper .sub-title {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.wrapper .sub-title img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.container .title {
+  line-height: 45px;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  background-color: #142759;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+.container .main-gnb {
+  margin-bottom: 15px;
+}
+.container .main-gnb ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.container .main-gnb ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  height: 70px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #899fce;
+}
+.container .main-gnb ul li img {
+  width: 45px;
+}
+.container .processing-doc table {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+}
+.container .processing-doc table tbody tr {
+  height: 45px;
+}
+.container .processing-doc table tbody tr th,
+.container .processing-doc table tbody tr td {
+  border: 1px solid #828282;
+}
+.container .processing-doc table tbody .bg-color {
+  background-color: #f0f3fa;
+}
+.container .progress-rate .sub-gnb {
+  display: flex;
+  gap: 5px;
+}
+.container .progress-rate .sub-gnb article {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.2857142857%;
+  height: 80px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: #000;
+}
+.container .progress-rate .sub-gnb article img {
+  width: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

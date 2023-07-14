@@ -21,12 +21,16 @@ a {
 }
 table {
 	border-collapse: collapse;
+	font-size: 15px;
+}
+.point {
+	color: #fb0808;
 }
 
 .wrapper {
 	float: left;
 	width: 49%;
-	margin-bottom: 1%;
+	margin-bottom: 10px;
 	&:nth-of-type(3),
 	&:nth-of-type(2n + 6) {
 		margin-right: 2%;
@@ -39,7 +43,7 @@ table {
 			bottom: 10px;
 		}
 		img {
-			width: 30px;
+			width: 20px;
 			margin-right: 10px;
 		}
 	}
@@ -60,11 +64,11 @@ table {
 		height: 45px;
 		color: #fff;
 		background-color: #142759;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		padding-left: 10px;
 	}
 	.main-gnb {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		ul {
 			display: flex;
 			justify-content: space-evenly;
@@ -79,7 +83,7 @@ table {
 				color: #fff;
 				background-color: #899fce;
 				img {
-					width: 45px;
+					width: 30px;
 				}
 			}
 		}
@@ -91,7 +95,7 @@ table {
 			table-layout: fixed;
 			tbody {
 				tr {
-					height: 45px;
+					height: 40px;
 					th,
 					td {
 						border: 1px solid #828282;
@@ -110,17 +114,163 @@ table {
 			article {
 				flex: 1;
 				display: flex;
-				justify-content: center;
+				flex-direction: column;
+				justify-content: space-around;
 				align-items: center;
-				width: calc(100% / 7);
-				height: 80px;
-				border: 1px solid #000;
+				height: 74px;
+				border: 1px solid #828282;
 				border-radius: 5px;
 				box-shadow: #000;
-				img {
-					width: 30px;
+				span {
+					display: block;
+				}
+				div {
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					width: 100%;
+					img {
+						width: 30px;
+					}
+					b {
+						font-size: 18px;
+						&.num {
+							color: #5978b9;
+						}
+					}
 				}
 			}
 		}
+	}
+	.activity-progress {
+		.sub-gnb {
+			display: flex;
+			gap: 15px;
+			article {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-evenly;
+				border: 1px solid #828282;
+				border-radius: 8px;
+				background-color: #f4f4f2;
+				height: 74px;
+				b {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.processing-wait {
+		table {
+			width: 100%;
+			text-align: center;
+			tr {
+				height: 33px;
+				th,
+				td {
+					border: 1px solid #828282;
+				}
+				th {
+					background-color: #f0f3fa;
+				}
+			}
+		}
+	}
+	.notice {
+		width: 100%;
+		height: 200px;
+		border: 1px solid #828282;
+	}
+}
+
+//개발팀별 project 현황
+.team-graph {
+	.highcharts-figure {
+		width: 50%;
+		float: left;
+		#container {
+			height: 300px;
+			.highcharts-title {
+				font-size: 15px !important;
+			}
+			.highcharts-data-table thead tr,
+			.highcharts-data-table tr:nth-child(even) {
+				background: #f8f8f8;
+			}
+
+			.highcharts-data-table table {
+				border: 1px solid #ebebeb;
+				width: 100%;
+				max-width: 500px;
+				tr {
+					td,
+					th,
+					caption {
+						padding: 0.5em;
+					}
+					th {
+						font-weight: 600;
+						padding: 0.5em;
+					}
+					caption {
+						padding: 1em 0;
+						font-size: 1.2em;
+						color: #555;
+					}
+				}
+				tr:hover {
+					background: #f1f7ff;
+				}
+			}
+		}
+	}
+}
+
+//APQP 단계별
+.step-graph {
+	.highcharts-figure {
+		width: 50%;
+		float: left;
+	}
+
+	#container {
+		height: 400px;
+	}
+
+	.highcharts-data-table table {
+		font-family: Verdana, sans-serif;
+		border-collapse: collapse;
+		border: 1px solid #ebebeb;
+		text-align: center;
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.highcharts-data-table caption {
+		padding: 1em 0;
+		font-size: 1.2em;
+		color: #555;
+	}
+
+	.highcharts-data-table th {
+		font-weight: 600;
+		padding: 0.5em;
+	}
+
+	.highcharts-data-table td,
+	.highcharts-data-table th,
+	.highcharts-data-table caption {
+		padding: 0.5em;
+	}
+
+	.highcharts-data-table thead tr,
+	.highcharts-data-table tr:nth-child(even) {
+		background: #f8f8f8;
+	}
+
+	.highcharts-data-table tr:hover {
+		background: #f1f7ff;
 	}
 }

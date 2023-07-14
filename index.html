@@ -7,6 +7,10 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 
 <body>
@@ -25,7 +29,7 @@
       </ul>
     </div>
     <div class="wrapper processing-doc">
-      <div class="sub-title"><img src="image/처리대기문서.png" alt="menu-icon">처리대기문서</div>
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">처리대기문서</div>
       <table>
         <caption class="hidden">처리대기문서</caption>
         <tbody>
@@ -51,7 +55,7 @@
             <th style="width: 50px;">D</th>
           </tr>
           <tr>
-            <td style="width:100px">개인 미처리</td>
+            <td>개인 미처리</td>
             <td></td>
             <td></td>
             <td></td>
@@ -66,7 +70,7 @@
             <td></td>
           </tr>
           <tr>
-            <td style="width:100px">개인 참조</td>
+            <td>개인 참조</td>
             <td></td>
             <td></td>
             <td></td>
@@ -81,7 +85,7 @@
             <td></td>
           </tr>
           <tr>
-            <td style="width:100px">부서 미처리</td>
+            <td>부서 미처리</td>
             <td></td>
             <td></td>
             <td></td>
@@ -99,24 +103,145 @@
       </table>
     </div>
     <div class="wrapper progress-rate">
-      <div class="sub-title"><img src="image/처리대기문서.png" alt="menu-icon"> 진척율 대시보드</div>
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon"> 진척율 대시보드</div>
       <div class="sub-gnb">
-        <article>당월전체<img src="image/당월전체.png" alt=""><span>22</span></article>
-        <article>당월진척율<img src="image/당월진척율.png" alt=""><span>57%</span></article>
-        <article>당월완료<img src="image/당월완료.png" alt=""><span>11</span></article>
-        <article>지연<img src="image/지연_1@4x.png" alt=""><span>6</span></article>
-        <article>폐기<img src="image/폐기@4x.png" alt=""><span>0</span></article>
-        <article>당월이슈<img src="image/당월이슈.png" alt=""><span>7</span></article>
-        <article>당월조치<img src="image/당월조치.png" alt=""><span>3/7</span></article>
+        <article><span>당월전체</span>
+          <div>
+            <img src="image/당월전체.png" alt=""><b class="num">22</b>
+          </div>
+        </article>
+        <article><span>당월진척율</span>
+          <div>
+            <img src="image/당월진척율.png" alt=""><b class="num">57%</b>
+          </div>
+        </article>
+        <article><span>당월완료</span>
+          <div>
+            <img src="image/당월완료.png" alt=""><b class="num">11</b>
+          </div>
+        </article>
+        <article><span>지연</span>
+          <div>
+            <img src="image/지연_1@4x.png" alt=""><b class="point">6</b>
+          </div>
+        </article>
+        <article><span>폐기</span>
+          <div>
+            <img src="image/폐기@4x.png" alt=""><b class="num">0</b>
+          </div>
+        </article>
+        <article><span>당월이슈</span>
+          <div>
+            <img src="image/당월이슈.png" alt=""><b class="num">7</b>
+          </div>
+        </article>
+        <article><span>당월조치</span>
+          <div>
+            <img src="image/당월조치.png" alt=""><b class="num">3/7</b>
+          </div>
+        </article>
       </div>
     </div>
     <div class="wrapper activity-progress">
-      <div class="sub-title"><img src="image/처리대기문서.png" alt="menu-icon">Activity 진척현황</div>
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">Activity 진척현황</div>
+      <div class="sub-gnb">
+        <article><span>주간 Activity</span><b>82</b></article>
+        <article><span>당일 Activity</span><b>12</b></article>
+        <article><span>주간이슈발생</span><b class="point">8</b></article>
+        <article><span>개선조치대상</span><b>6</b></article>
+      </div>
+    </div>
+    <div class="wrapper processing-wait">
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">처리대기문서 List</div>
+      <table>
+        <caption class="hidden">처리대기문서 list</caption>
+        <tr>
+          <th>상태</th>
+          <th>접수일</th>
+          <th>업무모듈</th>
+          <th>제목</th>
+          <th>진행단계</th>
+          <th>요청자</th>
+        </tr>
+        <tr>
+          <td><img src="image/red_circle.png" alt=""></td>
+          <td>2023-07-19</td>
+          <td>개발모듈</td>
+          <td>[TEST1_20230719] 문서:ABC2</td>
+          <td>실적문서승인</td>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td><img src="image/yellow_circle.png" alt=""></td>
+          <td>2023-07-14</td>
+          <td>변경관리</td>
+          <td>[TEST1_20230714] 문서:ABC</td>
+          <td>PRE-CCB 결과등록</td>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td><img src="image/green_circle.png" alt=""></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="wrapper processing-wait">
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">공지사항</div>
+      <div class="wrapper notice"></div>
     </div>
     <div class="wrapper">
-      <div class="sub-title"><img src="image/처리대기문서.png" alt="menu-icon">처리대기문서 List</div>
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">프로젝트 현황</div>
+      <div class="graph-wrapper">
+        <div class="team-graph">
+          <figure class="highcharts-figure">
+            <div id="container_team"></div>
+          </figure>
+        </div>
+        <div class="step-graph">
+          <figure class="highcharts-figure">
+            <div id="container_step"></div>
+
+          </figure>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="wrapper">
+      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">품질 대시보드(월간실적)</div>
+      <div class="sub-gnb">
+        <article><span>개발품질</span></article>
+        <article><span>오픈이슈</span></article>
+        <article><span>NCR이슈</span></article>
+        <article><span>과거품질</span></article>
+        <article><span>개발표준관리</span></article>
+        <article><span>심사관리</span></article>
+      </div>
+      <div class="sub-gnb-customer">
+        <article><img src="image/베이지 개발포탈메뉴얼@4x.png" alt="">개발포탈 메뉴얼</article>
+        <article>장애처리 게시판</article>
+        <article>Q&A 게시판</article>
+        <article>회의록</article>
+      </div>
+    </div>
 </body>
 
 </html>

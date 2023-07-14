@@ -1,1 +1,19 @@
-<svg width="53" height="53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><g transform="translate(-506 -557)"><path d="M518.698 564.729 546.302 564.729 546.302 602.271 518.698 602.271 518.698 564.729ZM515.385 605.583 549.615 605.583 549.615 561.417 515.385 561.417 515.385 605.583Z" fill="#FFFFFF"/><path d="M533.604 569.698 542.99 569.698 542.99 571.906 533.604 571.906Z" fill="#FFFFFF"/><path d="M533.604 578.531 542.99 578.531 542.99 580.74 533.604 580.74Z" fill="#FFFFFF"/><path d="M533.604 596.198 542.99 596.198 542.99 598.406 533.604 598.406Z" fill="#FFFFFF"/><path d="M533.604 587.365 542.99 587.365 542.99 589.573 533.604 589.573Z" fill="#FFFFFF"/><path d="M530.181 568.483 528.635 566.938 524.992 570.581 523.556 569.146 522.01 570.692 524.992 573.673Z" fill="#FFFFFF"/><path d="M530.181 577.317 528.635 575.771 524.992 579.415 523.556 577.979 522.01 579.525 524.992 582.506Z" fill="#FFFFFF"/><path d="M530.181 586.15 528.635 584.604 524.992 588.248 523.556 586.812 522.01 588.358 524.992 591.34Z" fill="#FFFFFF"/><path d="M530.181 594.873 528.635 593.327 524.992 596.971 523.556 595.535 522.01 597.081 524.992 600.062Z" fill="#FFFFFF"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 53 53" style="enable-background:new 0 0 53 53;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g transform="translate(-506 -557)">
+	<path class="st0" d="M515.9,561.6h32.3v43.9h-32.3V561.6z M512.1,609.4h40v-51.6h-40V609.4z"/>
+	<path class="st0" d="M533.4,567.4h11v2.6h-11V567.4z"/>
+	<path class="st0" d="M533.4,577.7h11v2.6h-11V577.7z"/>
+	<path class="st0" d="M533.4,598.4h11v2.6h-11V598.4z"/>
+	<path class="st0" d="M533.4,588.1h11v2.6h-11V588.1z"/>
+	<path class="st0" d="M529.4,566l-1.8-1.8l-4.3,4.3l-1.7-1.7l-1.8,1.8l3.5,3.5L529.4,566z"/>
+	<path class="st0" d="M529.4,576.3l-1.8-1.8l-4.3,4.3l-1.7-1.7l-1.8,1.8l3.5,3.5L529.4,576.3z"/>
+	<path class="st0" d="M529.4,586.6l-1.8-1.8l-4.3,4.3l-1.7-1.7l-1.8,1.8l3.5,3.5L529.4,586.6z"/>
+	<path class="st0" d="M529.4,596.8l-1.8-1.8l-4.3,4.3l-1.7-1.7l-1.8,1.8l3.5,3.5L529.4,596.8z"/>
+</g>
+</svg>

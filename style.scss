@@ -30,7 +30,7 @@ table {
 .wrapper {
 	float: left;
 	width: 49%;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	&:nth-of-type(3),
 	&:nth-of-type(2n + 6) {
 		margin-right: 2%;
@@ -45,6 +45,26 @@ table {
 		img {
 			width: 20px;
 			margin-right: 10px;
+		}
+		.more-btn {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 20px;
+			border-radius: 5px;
+			background-color: #495464;
+			color: #fff;
+			font-size: 12px;
+		}
+		&.title-more {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p {
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 }
@@ -71,19 +91,25 @@ table {
 		margin-bottom: 10px;
 		ul {
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: space-between;
 			gap: 20px;
 			li {
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
 				flex: 1;
 				height: 70px;
-				border-radius: 20px;
-				color: #fff;
+				border-radius: 15px;
 				background-color: #899fce;
-				img {
-					width: 30px;
+				&:hover {
+					background-color: #b5bfd2;
+				}
+				a {
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					height: 100%;
+					color: #fff;
+					img {
+						width: 30px;
+					}
 				}
 			}
 		}
@@ -100,6 +126,12 @@ table {
 					td {
 						border: 1px solid #828282;
 					}
+					td {
+						cursor: pointer;
+						&:hover {
+							background-color: #f4f4f2;
+						}
+					}
 				}
 				.bg-color {
 					background-color: #f0f3fa;
@@ -113,29 +145,33 @@ table {
 			gap: 5px;
 			article {
 				flex: 1;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-around;
-				align-items: center;
-				height: 74px;
+				height: 75px;
 				border: 1px solid #828282;
 				border-radius: 5px;
 				box-shadow: #000;
-				span {
-					display: block;
+				&:hover {
+					background-color: #f4f4f2;
 				}
-				div {
+				a {
 					display: flex;
+					flex-direction: column;
 					justify-content: space-evenly;
 					align-items: center;
-					width: 100%;
-					img {
-						width: 30px;
-					}
-					b {
-						font-size: 18px;
-						&.num {
-							color: #5978b9;
+					height: 100%;
+					color: #000;
+					div {
+						display: flex;
+						justify-content: space-evenly;
+						align-items: center;
+						width: 100%;
+						img {
+							height: 30px;
+						}
+						b {
+							font-size: 18px;
+							&.num {
+								color: #5978b9;
+							}
 						}
 					}
 				}
@@ -148,16 +184,31 @@ table {
 			gap: 15px;
 			article {
 				flex: 1;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: space-evenly;
 				border: 1px solid #828282;
 				border-radius: 8px;
 				background-color: #f4f4f2;
 				height: 74px;
-				b {
-					font-size: 18px;
+				&:hover {
+					background-color: #fff;
+				}
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-evenly;
+					color: #000;
+					height: 100%;
+					p {
+						width: 70%;
+						height: 25px;
+						background-color: #d7dae4;
+						border-radius: 8px;
+						text-align: center;
+						font: 15px/25px "맑은 고딕";
+					}
+					b {
+						font-size: 20px;
+					}
 				}
 			}
 		}
@@ -168,6 +219,9 @@ table {
 			text-align: center;
 			tr {
 				height: 33px;
+				&:hover {
+					background-color: #f4f4f2;
+				}
 				th,
 				td {
 					border: 1px solid #828282;
@@ -175,23 +229,127 @@ table {
 				th {
 					background-color: #f0f3fa;
 				}
+				td {
+					cursor: pointer;
+				}
 			}
 		}
 	}
 	.notice {
-		width: 100%;
-		height: 200px;
-		border: 1px solid #828282;
+		cursor: pointer;
+		.notice-wrapper {
+			height: 200px;
+			border: 1px solid #828282;
+			padding: 10px;
+			table {
+				width: 100%;
+				height: 100%;
+				tbody {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					height: 100%;
+					tr {
+						width: 95%;
+						flex: 1;
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-end;
+						border-bottom: 1px solid #666666;
+						padding: 0 5px 5px 5px;
+						&:hover {
+							background-color: #f4f4f2;
+						}
+						a {
+							color: #000;
+						}
+						.import-notice {
+							color: #fb0808;
+							svg {
+								width: 15px;
+								margin-right: 5px;
+								fill: #fb0808;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.qm-board {
+		.sub-gnb {
+			display: flex;
+			gap: 5%;
+			flex-wrap: wrap;
+			article {
+				width: 30%;
+				height: 85px;
+				float: left;
+				border: 1px solid #828282;
+				border-radius: 10px;
+				margin-bottom: 18px;
+				&:hover {
+					background-color: #f4f4f2;
+				}
+				span {
+					display: block;
+					width: 100%;
+					text-align: center;
+					margin-bottom: 10px;
+				}
+				a {
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					color: #000;
+					img {
+						height: 40px;
+					}
+					b {
+						font-size: 25px;
+					}
+				}
+			}
+		}
+		.sub-gnb-customer {
+			display: flex;
+			gap: 2%;
+			margin-top: 15px;
+			article {
+				flex: 1;
+				height: 80px;
+				border: 1px solid #828282;
+				border-radius: 10px;
+				&:hover {
+					background-color: #f4f4f2;
+				}
+				a {
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+					height: 100%;
+					img {
+						width: 50px;
+					}
+				}
+			}
+		}
 	}
 }
 
 //개발팀별 project 현황
 .team-graph {
+	height: 300px;
+	width: 50%;
+	float: left;
 	.highcharts-figure {
-		width: 50%;
-		float: left;
-		#container {
-			height: 300px;
+		height: 300px;
+		#container_team {
+			height: 100%;
+			.highcharts-data-label text {
+				font-size: 1em !important;
+			}
 			.highcharts-title {
 				font-size: 15px !important;
 			}
@@ -230,13 +388,14 @@ table {
 
 //APQP 단계별
 .step-graph {
+	width: 50%;
+	height: 300px;
+	float: left;
 	.highcharts-figure {
-		width: 50%;
-		float: left;
-	}
-
-	#container {
-		height: 400px;
+		height: 300px;
+		#container_step {
+			height: 100%;
+		}
 	}
 
 	.highcharts-data-table table {

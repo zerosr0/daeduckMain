@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 * {
   margin: 0;
@@ -34,7 +35,7 @@ table {
 .wrapper {
   float: left;
   width: 49%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .wrapper:nth-of-type(3), .wrapper:nth-of-type(2n + 6) {
   margin-right: 2%;
@@ -48,6 +49,26 @@ table {
 .wrapper .sub-title img {
   width: 20px;
   margin-right: 10px;
+}
+.wrapper .sub-title .more-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #495464;
+  color: #fff;
+  font-size: 12px;
+}
+.wrapper .sub-title.title-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .sub-title.title-more p {
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -74,20 +95,26 @@ table {
 }
 .container .main-gnb ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 20px;
 }
 .container .main-gnb ul li {
+  flex: 1;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #899fce;
+}
+.container .main-gnb ul li:hover {
+  background-color: #b5bfd2;
+}
+.container .main-gnb ul li a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex: 1;
-  height: 70px;
-  border-radius: 20px;
+  height: 100%;
   color: #fff;
-  background-color: #899fce;
 }
-.container .main-gnb ul li img {
+.container .main-gnb ul li a img {
   width: 30px;
 }
 .container .processing-doc table {
@@ -102,6 +129,12 @@ table {
 .container .processing-doc table tbody tr td {
   border: 1px solid #828282;
 }
+.container .processing-doc table tbody tr td {
+  cursor: pointer;
+}
+.container .processing-doc table tbody tr td:hover {
+  background-color: #f4f4f2;
+}
 .container .processing-doc table tbody .bg-color {
   background-color: #f0f3fa;
 }
@@ -111,31 +144,35 @@ table {
 }
 .container .progress-rate .sub-gnb article {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 74px;
+  height: 75px;
   border: 1px solid #828282;
   border-radius: 5px;
   box-shadow: #000;
 }
-.container .progress-rate .sub-gnb article span {
-  display: block;
+.container .progress-rate .sub-gnb article:hover {
+  background-color: #f4f4f2;
 }
-.container .progress-rate .sub-gnb article div {
+.container .progress-rate .sub-gnb article a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  color: #000;
+}
+.container .progress-rate .sub-gnb article a div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-.container .progress-rate .sub-gnb article div img {
-  width: 30px;
+.container .progress-rate .sub-gnb article a div img {
+  height: 30px;
 }
-.container .progress-rate .sub-gnb article div b {
+.container .progress-rate .sub-gnb article a div b {
   font-size: 18px;
 }
-.container .progress-rate .sub-gnb article div b.num {
+.container .progress-rate .sub-gnb article a div b.num {
   color: #5978b9;
 }
 .container .activity-progress .sub-gnb {
@@ -144,17 +181,32 @@ table {
 }
 .container .activity-progress .sub-gnb article {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   border: 1px solid #828282;
   border-radius: 8px;
   background-color: #f4f4f2;
   height: 74px;
 }
-.container .activity-progress .sub-gnb article b {
-  font-size: 18px;
+.container .activity-progress .sub-gnb article:hover {
+  background-color: #fff;
+}
+.container .activity-progress .sub-gnb article a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #000;
+  height: 100%;
+}
+.container .activity-progress .sub-gnb article a p {
+  width: 70%;
+  height: 25px;
+  background-color: #d7dae4;
+  border-radius: 8px;
+  text-align: center;
+  font: 15px/25px "맑은 고딕";
+}
+.container .activity-progress .sub-gnb article a b {
+  font-size: 20px;
 }
 .container .processing-wait table {
   width: 100%;
@@ -163,6 +215,9 @@ table {
 .container .processing-wait table tr {
   height: 33px;
 }
+.container .processing-wait table tr:hover {
+  background-color: #f4f4f2;
+}
 .container .processing-wait table tr th,
 .container .processing-wait table tr td {
   border: 1px solid #828282;
@@ -170,55 +225,162 @@ table {
 .container .processing-wait table tr th {
   background-color: #f0f3fa;
 }
+.container .processing-wait table tr td {
+  cursor: pointer;
+}
 .container .notice {
-  width: 100%;
+  cursor: pointer;
+}
+.container .notice .notice-wrapper {
   height: 200px;
   border: 1px solid #828282;
+  padding: 10px;
+}
+.container .notice .notice-wrapper table {
+  width: 100%;
+  height: 100%;
+}
+.container .notice .notice-wrapper table tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.container .notice .notice-wrapper table tbody tr {
+  width: 95%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #666666;
+  padding: 0 5px 5px 5px;
+}
+.container .notice .notice-wrapper table tbody tr:hover {
+  background-color: #f4f4f2;
+}
+.container .notice .notice-wrapper table tbody tr a {
+  color: #000;
+}
+.container .notice .notice-wrapper table tbody tr .import-notice {
+  color: #fb0808;
+}
+.container .notice .notice-wrapper table tbody tr .import-notice svg {
+  width: 15px;
+  margin-right: 5px;
+  fill: #fb0808;
+}
+.container .qm-board .sub-gnb {
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+.container .qm-board .sub-gnb article {
+  width: 30%;
+  height: 85px;
+  float: left;
+  border: 1px solid #828282;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.container .qm-board .sub-gnb article:hover {
+  background-color: #f4f4f2;
+}
+.container .qm-board .sub-gnb article span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container .qm-board .sub-gnb article a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #000;
+}
+.container .qm-board .sub-gnb article a img {
+  height: 40px;
+}
+.container .qm-board .sub-gnb article a b {
+  font-size: 25px;
+}
+.container .qm-board .sub-gnb-customer {
+  display: flex;
+  gap: 2%;
+  margin-top: 15px;
+}
+.container .qm-board .sub-gnb-customer article {
+  flex: 1;
+  height: 80px;
+  border: 1px solid #828282;
+  border-radius: 10px;
+}
+.container .qm-board .sub-gnb-customer article:hover {
+  background-color: #f4f4f2;
+}
+.container .qm-board .sub-gnb-customer article a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.container .qm-board .sub-gnb-customer article a img {
+  width: 50px;
 }
 
-.team-graph .highcharts-figure {
+.team-graph {
+  height: 300px;
   width: 50%;
   float: left;
 }
-.team-graph .highcharts-figure #container {
+.team-graph .highcharts-figure {
   height: 300px;
 }
-.team-graph .highcharts-figure #container .highcharts-title {
+.team-graph .highcharts-figure #container_team {
+  height: 100%;
+}
+.team-graph .highcharts-figure #container_team .highcharts-data-label text {
+  font-size: 1em !important;
+}
+.team-graph .highcharts-figure #container_team .highcharts-title {
   font-size: 15px !important;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table thead tr,
-.team-graph .highcharts-figure #container .highcharts-data-table tr:nth-child(even) {
+.team-graph .highcharts-figure #container_team .highcharts-data-table thead tr,
+.team-graph .highcharts-figure #container_team .highcharts-data-table tr:nth-child(even) {
   background: #f8f8f8;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table table {
+.team-graph .highcharts-figure #container_team .highcharts-data-table table {
   border: 1px solid #ebebeb;
   width: 100%;
   max-width: 500px;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table table tr td,
-.team-graph .highcharts-figure #container .highcharts-data-table table tr th,
-.team-graph .highcharts-figure #container .highcharts-data-table table tr caption {
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr td,
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr th,
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
   padding: 0.5em;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table table tr th {
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr th {
   font-weight: 600;
   padding: 0.5em;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table table tr caption {
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
   padding: 1em 0;
   font-size: 1.2em;
   color: #555;
 }
-.team-graph .highcharts-figure #container .highcharts-data-table table tr:hover {
+.team-graph .highcharts-figure #container_team .highcharts-data-table table tr:hover {
   background: #f1f7ff;
 }
 
-.step-graph .highcharts-figure {
+.step-graph {
   width: 50%;
+  height: 300px;
   float: left;
 }
-.step-graph #container {
-  height: 400px;
+.step-graph .highcharts-figure {
+  height: 300px;
+}
+.step-graph .highcharts-figure #container_step {
+  height: 100%;
 }
 .step-graph .highcharts-data-table table {
   font-family: Verdana, sans-serif;

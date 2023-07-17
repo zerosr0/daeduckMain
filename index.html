@@ -18,14 +18,14 @@
     <div class="title">QMS > MYJOB현황</div>
     <div class="main-gnb">
       <ul>
-        <li><img src="image/myjob.svg" alt=""><span>My Job</span></li>
-        <li><img src="image/개발의뢰.svg" alt=""><span>개발의뢰</span></li>
-        <li><img src="image/개발품질.png" alt=""><span>개발품질</span></li>
-        <li><img src="image/오픈이슈.png" alt=""><span>오픈이슈</span></li>
-        <li><img src="image/과거품질.png" alt=""><span>과거품질</span></li>
-        <li><img src="image/변경관리.svg" alt=""><span>변경관리</span></li>
-        <li><img src="image/심사관리.png" alt=""><span>심사관리</span></li>
-        <li><img src="image/개발표준관리.svg" alt=""><span>개발표준관리</span></li>
+        <li><a href="#"><img src="image/myjob.svg" alt=""><span>My Job</span></a></li>
+        <li><a href="#"><img src="image/개발의뢰.svg" alt=""><span>개발의뢰</span></a></li>
+        <li><a href="#"><img src="image/개발품질white.png" alt=""><span>개발품질</span></a></li>
+        <li><a href="#"><img src="image/오픈이슈white.png" alt=""><span>오픈이슈</span></a></li>
+        <li><a href="#"><img src="image/과거품질white.png" alt=""><span>과거품질</span></a></li>
+        <li><a href="#"><img src="image/변경관리.svg" alt=""><span>변경관리</span></a></li>
+        <li><a href="#"><img src="image/심사관리white.png" alt=""><span>심사관리</span></a></li>
+        <li><a href="#"><img src="image/개발표준관리.svg" alt=""><span>개발표준관리</span></a></li>
       </ul>
     </div>
     <div class="wrapper processing-doc">
@@ -54,7 +54,7 @@
             <th>M(S)</th>
             <th style="width: 50px;">D</th>
           </tr>
-          <tr>
+          <tr onclick="location.href='#'">
             <td>개인 미처리</td>
             <td></td>
             <td></td>
@@ -69,7 +69,7 @@
             <td></td>
             <td></td>
           </tr>
-          <tr>
+          <tr onclick="location.href='#'">
             <td>개인 참조</td>
             <td></td>
             <td></td>
@@ -84,7 +84,7 @@
             <td></td>
             <td></td>
           </tr>
-          <tr>
+          <tr onclick="location.href='#'">
             <td>부서 미처리</td>
             <td></td>
             <td></td>
@@ -103,56 +103,64 @@
       </table>
     </div>
     <div class="wrapper progress-rate">
-      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon"> 진척율 대시보드</div>
+      <div class="sub-title title-more">
+        <p><img src="image/title-icon.png" alt="menu-icon"> 진척율 대시보드</p>
+        <a href="#" class="more-btn">more</a>
+      </div>
       <div class="sub-gnb">
-        <article><span>당월전체</span>
-          <div>
-            <img src="image/당월전체.png" alt=""><b class="num">22</b>
-          </div>
-        </article>
-        <article><span>당월진척율</span>
-          <div>
-            <img src="image/당월진척율.png" alt=""><b class="num">57%</b>
-          </div>
-        </article>
-        <article><span>당월완료</span>
-          <div>
-            <img src="image/당월완료.png" alt=""><b class="num">11</b>
-          </div>
-        </article>
-        <article><span>지연</span>
-          <div>
-            <img src="image/지연_1@4x.png" alt=""><b class="point">6</b>
-          </div>
-        </article>
-        <article><span>폐기</span>
-          <div>
-            <img src="image/폐기@4x.png" alt=""><b class="num">0</b>
-          </div>
-        </article>
-        <article><span>당월이슈</span>
-          <div>
-            <img src="image/당월이슈.png" alt=""><b class="num">7</b>
-          </div>
-        </article>
-        <article><span>당월조치</span>
-          <div>
-            <img src="image/당월조치.png" alt=""><b class="num">3/7</b>
-          </div>
-        </article>
+        <article><a href="#"><span>당월전체</span>
+            <div><img src="image/당월전체.png" alt=""><b class="num">22</b></div>
+          </a></article>
+        <article><a href="#"><span>당월진척율</span>
+            <div><img src="image/당월진척율.png" alt=""><b class="num">57%</b></div>
+          </a></article>
+        <article><a href="#"><span>당월완료</span>
+            <div><img src="image/당월완료.png" alt=""><b class="num">11</b></div>
+          </a></article>
+        <article><a href="#"><span>지연</span>
+            <div><img src="image/지연.png" alt=""><b class="point">6</b></div>
+          </a></article>
+        <article><a href="#"><span>폐기</span>
+            <div><img src="image/폐기.png" alt=""><b class="num">0</b></div>
+          </a></article>
+        <article><a href="#"><span>당월이슈</span>
+            <div><img src="image/당월이슈.png" alt=""><b class="num">7</b></div>
+          </a></article>
+        <article><a href="#"><span>당월조치</span>
+            <div><img src="image/당월조치.png" alt=""><b class="num">3/7</b></div>
+          </a></article>
       </div>
     </div>
     <div class="wrapper activity-progress">
       <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">Activity 진척현황</div>
       <div class="sub-gnb">
-        <article><span>주간 Activity</span><b>82</b></article>
-        <article><span>당일 Activity</span><b>12</b></article>
-        <article><span>주간이슈발생</span><b class="point">8</b></article>
-        <article><span>개선조치대상</span><b>6</b></article>
+        <article>
+          <a href="#">
+            <p>주간 Activity</p><b>82</b>
+          </a>
+        </article>
+        <article>
+          <a href="#">
+            <p>당일 Activity</p><b>12</b>
+          </a>
+        </article>
+        <article>
+          <a href="#">
+            <p>주간이슈발생</p><b class="point">8</b>
+          </a>
+        </article>
+        <article>
+          <a href="#">
+            <p>개선조치대상</p><b>6</b>
+          </a>
+        </article>
       </div>
     </div>
     <div class="wrapper processing-wait">
-      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">처리대기문서 List</div>
+      <div class="sub-title title-more">
+        <p><img src="image/title-icon.png" alt="menu-icon">처리대기문서 List</p>
+        <a href="#" class="more-btn">more</a>
+      </div>
       <table>
         <caption class="hidden">처리대기문서 list</caption>
         <tr>
@@ -163,7 +171,7 @@
           <th>진행단계</th>
           <th>요청자</th>
         </tr>
-        <tr>
+        <tr onclick="location.href='#'">
           <td><img src="image/red_circle.png" alt=""></td>
           <td>2023-07-19</td>
           <td>개발모듈</td>
@@ -171,7 +179,7 @@
           <td>실적문서승인</td>
           <td>홍길동</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='#'">
           <td><img src="image/yellow_circle.png" alt=""></td>
           <td>2023-07-14</td>
           <td>변경관리</td>
@@ -179,7 +187,7 @@
           <td>PRE-CCB 결과등록</td>
           <td>홍길동</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='#'">
           <td><img src="image/green_circle.png" alt=""></td>
           <td></td>
           <td></td>
@@ -187,7 +195,7 @@
           <td></td>
           <td></td>
         </tr>
-        <tr>
+        <tr onclick="location.href='#'">
           <td><span></span></td>
           <td></td>
           <td></td>
@@ -195,7 +203,7 @@
           <td></td>
           <td></td>
         </tr>
-        <tr>
+        <tr onclick="location.href='#'">
           <td><span></span></td>
           <td></td>
           <td></td>
@@ -205,11 +213,42 @@
         </tr>
       </table>
     </div>
-    <div class="wrapper processing-wait">
-      <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">공지사항</div>
-      <div class="wrapper notice"></div>
+    <div class="wrapper notice">
+      <div class="sub-title title-more">
+        <p><img src="image/title-icon.png" alt="menu-icon">공지사항</p>
+        <a href="#" class="more-btn">more</a>
+      </div>
+      <div class="notice-wrapper">
+        <table>
+          <caption class="hidden">공지사항</caption>
+          <tbody>
+            <tr onclick="location.href='#'">
+              <td class="import-notice"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                  viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                </svg>공지사항 테스트
+              </td>
+              <td>2023-07-17</td>
+            </tr>
+            <tr onclick="location.href='#'">
+              <td>GQMS 추진경과보고</td>
+              <td>2023-07-14</td>
+
+            </tr>
+            <tr onclick="location.href='#'">
+              <td>QMS에 파일 첨부가 안되는 경우 해결 방법</td>
+              <td>2023-07-13</td>
+            </tr>
+            <tr onclick="location.href='#'">
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper current-project">
       <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">프로젝트 현황</div>
       <div class="graph-wrapper">
         <div class="team-graph">
@@ -225,21 +264,21 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper qm-board">
       <div class="sub-title"><img src="image/title-icon.png" alt="menu-icon">품질 대시보드(월간실적)</div>
       <div class="sub-gnb">
-        <article><span>개발품질</span></article>
-        <article><span>오픈이슈</span></article>
-        <article><span>NCR이슈</span></article>
-        <article><span>과거품질</span></article>
-        <article><span>개발표준관리</span></article>
-        <article><span>심사관리</span></article>
+        <article><span>개발품질</span><a href="#"><img src="image/개발품질.png" alt=""><b>0건</b></a></article>
+        <article><span>오픈이슈</span><a href="#"><img src="image/오픈이슈.png" alt=""><b>0건</b></a></article>
+        <article><span>NCR이슈</span><a href="#"><img src="image/NCR이슈.png" alt=""><b>0건</b></a></article>
+        <article><span>과거품질</span><a href="#"><img src="image/과거품질.png" alt=""><b>0건</b></a></article>
+        <article><span>개발표준관리</span><a href="#"><img src="image/개발표준관리_1@4x.png" alt=""><b>0건</b></a></article>
+        <article><span>심사관리</span><a href="#"><img src="image/심사관리.png" alt=""><b>0건</b></a></article>
       </div>
       <div class="sub-gnb-customer">
-        <article><img src="image/베이지 개발포탈메뉴얼@4x.png" alt="">개발포탈 메뉴얼</article>
-        <article>장애처리 게시판</article>
-        <article>Q&A 게시판</article>
-        <article>회의록</article>
+        <article><a href="#"><img src="image/개발포탈메뉴얼.png" alt="">개발포탈 메뉴얼</a></article>
+        <article><a href="#"><img src="image/장애처리게시판.png" alt="">장애처리 게시판</a></article>
+        <article><a href="#"><img src="image/qna게시판.png" alt="">Q&A 게시판</a></article>
+        <article><a href="#"><img src="image/회의록.png" alt="">회의록</a></article>
       </div>
     </div>
 </body>

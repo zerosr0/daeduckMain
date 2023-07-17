@@ -23,7 +23,7 @@ Highcharts.chart('container_team', {
     align: 'left',
     x: 250,
     verticalAlign: 'top',
-    y: 15,
+    y: 20,
     floating: true,
     backgroundColor:
       Highcharts.defaultOptions.legend.backgroundColor || 'white',
@@ -45,13 +45,18 @@ Highcharts.chart('container_team', {
   },
   series: [{
     name: 'T1',
-    data: [3, 5, 2]
+    data: [3, 5, 2],
+    size: 15,
+    color: '#87DEA4',
+
   }, {
     name: 'T2',
-    data: [12, 8, 8]
+    data: [12, 8, 8],
+    color: '#4472C4',
   }, {
     name: 'T3',
-    data: [2, 2, 5]
+    data: [2, 2, 5],
+    color: '#FDE367',
   }],
   //워터마크 제거
   credits: {
@@ -90,40 +95,45 @@ Highcharts.chart('container_step', {
       borderWidth: 0,
       dataLabels: {
         enabled: true,
-        format: '{point.y:.0f}건'
+        format: '{point.y:.0f}건',
       }
     }
   },
 
   tooltip: {
-    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}%</b> of total<br/>'
+    headerFormat: '',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}건</b>'
   },
 
   series: [
     {
-      name: 'Browsers',
+      name: 'APQP 단계별',
       colorByPoint: true,
       data: [
         {
           name: '1단계',
           y: 2,
+          color: '#B5BED7',
         },
         {
           name: '2단계',
           y: 2,
+          color: '#B5BED7',
         },
         {
           name: '3단계',
           y: 10,
+          color: '#B5BED7',
         },
         {
           name: '4단계',
           y: 8,
+          color: '#B5BED7',
         },
         {
           name: '5단계',
           y: 2,
+          color: '#B5BED7',
         },
       ]
     }

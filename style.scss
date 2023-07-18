@@ -342,10 +342,10 @@ table {
 	}
 }
 
-//개발팀별 project 현황
+//개발팀별 project 현황 그래프
 .team-graph {
 	height: 300px;
-	width: 50%;
+	width: 45%;
 	float: left;
 	.highcharts-figure {
 		height: 300px;
@@ -390,9 +390,9 @@ table {
 	}
 }
 
-//APQP 단계별
+//APQP 단계별 그래프
 .step-graph {
-	width: 50%;
+	width: 55%;
 	height: 300px;
 	float: left;
 	.highcharts-figure {
@@ -446,6 +446,11 @@ table {
 		.main-gnb {
 			ul {
 				gap: 15px;
+			}
+		}
+		.processing-doc {
+			table {
+				font-size: 14px;
 			}
 		}
 		.progress-rate {
@@ -515,6 +520,44 @@ table {
 						font-size: 14px;
 						img {
 							width: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+	//개발팀별 project 현황 그래프
+	.team-graph {
+		width: 50%;
+	}
+
+	//APQP 단계별 그래프
+	.step-graph {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.wrapper {
+		width: 100%;
+		margin-bottom: 5px;
+		&:nth-of-type(3),
+		&:nth-of-type(2n + 6) {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.container {
+		.main-gnb {
+			ul {
+				li {
+					a {
+						font-size: 14px;
+						flex-direction: column;
+						img {
+							width: 25px;
 						}
 					}
 				}

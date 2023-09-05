@@ -154,7 +154,7 @@ if (matchMedia("screen and (max-width: 1449px)").matches) {
     },
     title: {
       text: '개발팀별 project 현황',
-      align: 'left'
+      align: 'center'
     },
     xAxis: {
       categories: ['정상', '지연예상', '지연']

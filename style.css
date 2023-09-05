@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* reset css */
 * {
   margin: 0;
   padding: 0;
@@ -50,15 +51,13 @@ table {
   margin-right: 10px;
 }
 .wrapper .sub-title .more-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   width: 40px;
   height: 20px;
   border-radius: 5px;
   background-color: #495464;
   color: #fff;
-  font-size: 12px;
+  font: 12px/20px "Noto Sans KR", sans-serif;
 }
 .wrapper .sub-title.title-more {
   display: flex;
@@ -70,24 +69,133 @@ table {
   align-items: center;
 }
 
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 60px;
+  border-bottom: 5px solid #142759;
+  background-color: #fff;
+}
+header .header-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+header .header-container .logo-img {
+  display: block;
+  position: relative;
+  width: 163px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+header .header-container .logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .header-container .gnb-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+header .header-container .gnb-wrap .admin {
+  text-align: right;
+  font-size: 14px;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 {
+  font-size: 14px;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li a {
+  color: #282828;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li:hover {
+  background: #e6eaef;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li:hover .sub-menu1 {
+  display: flex;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li:hover .sub-menu1 ul li:hover .sub-menu2 {
+  display: block;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li:hover .sub-menu1 ul li:hover > a {
+  color: #337ab7;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  flex-direction: column;
+  top: 50px;
+  left: 0;
+  width: 190px;
+  background: #e6eaef;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 ul li {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #d2d5d8;
+  border-top: none;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 ul li a i {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 ul li .sub-menu2 {
+  position: absolute;
+  left: 189px;
+  top: -1px;
+  display: none;
+  width: 200px;
+  background: #e6eaef;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 ul li:nth-of-type(1) {
+  border-top: 1px solid #d2d5d8;
+}
+header .header-container .gnb-wrap #gnb .sub-menu0 > li .sub-menu1 ul li ul li a {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-container .gnb-wrap #gnb-mobile {
+  display: none;
+  position: relative;
+}
+header .header-container .gnb-wrap #gnb-mobile ul li {
+  width: 100%;
+}
+header .header-container .gnb-wrap #gnb-mobile .sub-menu0 ul li a:hover {
+  color: #4a4944;
+  background-color: #e6eaef;
+}
+header .header-container .gnb-wrap #gnb > ul,
+header .header-container .gnb-wrap #gnb-mobile > ul {
+  height: 50px;
+  display: flex;
+}
+
 .container {
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 70px 10px 0px;
 }
 .container::after {
   display: block;
   content: "";
   clear: both;
-}
-.container .title {
-  line-height: 45px;
-  width: 100%;
-  height: 45px;
-  color: #fff;
-  background-color: #142759;
-  margin-bottom: 10px;
-  padding-left: 10px;
 }
 .container .main-gnb {
   margin-bottom: 10px;
@@ -95,11 +203,11 @@ table {
 .container .main-gnb ul {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
 }
 .container .main-gnb ul li {
   flex: 1;
-  height: 70px;
+  height: 40px;
   border-radius: 15px;
   background-color: #899fce;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -115,7 +223,15 @@ table {
   color: #fff;
 }
 .container .main-gnb ul li a img {
-  width: 30px;
+  width: 25px;
+}
+.container .title {
+  line-height: 41px;
+  width: 100%;
+  height: 41px;
+  color: #fff;
+  background-color: #142759;
+  padding-left: 10px;
 }
 .container .processing-doc table {
   width: 100%;
@@ -123,7 +239,7 @@ table {
   table-layout: fixed;
 }
 .container .processing-doc table tbody tr {
-  height: 40px;
+  height: 35px;
 }
 .container .processing-doc table tbody tr th,
 .container .processing-doc table tbody tr td {
@@ -144,7 +260,7 @@ table {
 }
 .container .progress-rate .sub-gnb article {
   flex: 1;
-  height: 75px;
+  height: 62px;
   border: 1px solid #828282;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -160,6 +276,9 @@ table {
   height: 100%;
   color: #000;
 }
+.container .progress-rate .sub-gnb article a span {
+  font-size: 14px;
+}
 .container .progress-rate .sub-gnb article a div {
   display: flex;
   justify-content: space-evenly;
@@ -167,7 +286,7 @@ table {
   width: 100%;
 }
 .container .progress-rate .sub-gnb article a div img {
-  height: 30px;
+  height: 25px;
 }
 .container .progress-rate .sub-gnb article a div b {
   font-size: 18px;
@@ -177,14 +296,14 @@ table {
 }
 .container .activity-progress .sub-gnb {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 .container .activity-progress .sub-gnb article {
   flex: 1;
   border: 1px solid #828282;
   border-radius: 8px;
   background-color: #f4f4f2;
-  height: 74px;
+  height: 65px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .container .activity-progress .sub-gnb article:hover {
@@ -200,11 +319,11 @@ table {
 }
 .container .activity-progress .sub-gnb article a p {
   width: 70%;
-  height: 25px;
+  height: 20px;
   background-color: #d7dae4;
-  border-radius: 8px;
+  border-radius: 5px;
   text-align: center;
-  font: 15px/25px "Noto Sans KR", sans-serif;
+  font: 15px/20px "Noto Sans KR", sans-serif;
 }
 .container .activity-progress .sub-gnb article a b {
   font-size: 20px;
@@ -270,6 +389,95 @@ table {
   margin-right: 5px;
   fill: #fb0808;
 }
+.container .current-project {
+  height: 300px;
+}
+.container .current-project .team-graph {
+  height: 270px;
+  width: 45%;
+  float: left;
+}
+.container .current-project .team-graph .highcharts-figure {
+  height: 270px;
+}
+.container .current-project .team-graph .highcharts-figure #container_team {
+  height: 100%;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-label text {
+  font-size: 1em !important;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-title {
+  font-size: 15px !important;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table thead tr,
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table {
+  border: 1px solid #ebebeb;
+  width: 100%;
+  max-width: 500px;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr td,
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr th,
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
+  padding: 0.5em;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.container .current-project .team-graph .highcharts-figure #container_team .highcharts-data-table table tr:hover {
+  background: #f1f7ff;
+}
+.container .current-project .step-graph {
+  width: 55%;
+  height: 270px;
+  float: left;
+}
+.container .current-project .step-graph .highcharts-figure {
+  height: 270px;
+}
+.container .current-project .step-graph .highcharts-figure #container_step {
+  height: 100%;
+}
+.container .current-project .step-graph .highcharts-title {
+  font-size: 15px !important;
+}
+.container .current-project .step-graph .highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.container .current-project .step-graph .highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.container .current-project .step-graph .highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+.container .current-project .step-graph .highcharts-data-table td,
+.container .current-project .step-graph .highcharts-data-table th,
+.container .current-project .step-graph .highcharts-data-table caption {
+  padding: 0.5em;
+}
+.container .current-project .step-graph .highcharts-data-table thead tr,
+.container .current-project .step-graph .highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.container .current-project .step-graph .highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
 .container .qm-board .sub-gnb {
   display: flex;
   gap: 5%;
@@ -277,7 +485,7 @@ table {
 }
 .container .qm-board .sub-gnb article {
   width: 30%;
-  height: 85px;
+  height: 80px;
   float: left;
   border: 1px solid #828282;
   border-radius: 10px;
@@ -291,7 +499,7 @@ table {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .container .qm-board .sub-gnb article a {
   display: flex;
@@ -311,7 +519,7 @@ table {
 }
 .container .qm-board .sub-gnb-customer article {
   flex: 1;
-  height: 80px;
+  height: 60px;
   border: 1px solid #828282;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
@@ -327,95 +535,7 @@ table {
   color: #000;
 }
 .container .qm-board .sub-gnb-customer article a img {
-  width: 50px;
-}
-
-.team-graph {
-  height: 300px;
-  width: 45%;
-  float: left;
-}
-.team-graph .highcharts-figure {
-  height: 300px;
-}
-.team-graph .highcharts-figure #container_team {
-  height: 100%;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-label text {
-  font-size: 1em !important;
-}
-.team-graph .highcharts-figure #container_team .highcharts-title {
-  font-size: 15px !important;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table thead tr,
-.team-graph .highcharts-figure #container_team .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table table {
-  border: 1px solid #ebebeb;
-  width: 100%;
-  max-width: 500px;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr td,
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr th,
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
-  padding: 0.5em;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr th {
-  font-weight: 600;
-  padding: 0.5em;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr caption {
-  padding: 1em 0;
-  font-size: 1.2em;
-  color: #555;
-}
-.team-graph .highcharts-figure #container_team .highcharts-data-table table tr:hover {
-  background: #f1f7ff;
-}
-
-.step-graph {
-  width: 55%;
-  height: 300px;
-  float: left;
-}
-.step-graph .highcharts-figure {
-  height: 300px;
-}
-.step-graph .highcharts-figure #container_step {
-  height: 100%;
-}
-.step-graph .highcharts-title {
-  font-size: 15px !important;
-}
-.step-graph .highcharts-data-table table {
-  font-family: Verdana, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #ebebeb;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-}
-.step-graph .highcharts-data-table caption {
-  padding: 1em 0;
-  font-size: 1.2em;
-  color: #555;
-}
-.step-graph .highcharts-data-table th {
-  font-weight: 600;
-  padding: 0.5em;
-}
-.step-graph .highcharts-data-table td,
-.step-graph .highcharts-data-table th,
-.step-graph .highcharts-data-table caption {
-  padding: 0.5em;
-}
-.step-graph .highcharts-data-table thead tr,
-.step-graph .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-.step-graph .highcharts-data-table tr:hover {
-  background: #f1f7ff;
+  width: 40px;
 }
 
 @media screen and (max-width: 1450px) {
@@ -427,9 +547,6 @@ table {
   }
   .container .progress-rate .sub-gnb {
     gap: 5px;
-  }
-  .container .progress-rate .sub-gnb article a span {
-    font-size: 14px;
   }
   .container .progress-rate .sub-gnb article a div img {
     height: 23px;

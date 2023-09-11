@@ -130,36 +130,30 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
 .leftmenu .favorite {
   position: relative;
 }
-.leftmenu .favorite ul {
+.leftmenu .favorite .level1 {
   position: absolute;
-  left: -9999px;
+  left: 0;
   width: 100%;
   background-color: #ffffff;
   border-right: 1px solid #caccce;
 }
-.leftmenu .favorite ul.level1 {
-  left: 0;
+.leftmenu .favorite .level1 .level1-li .lastest-list-box,
+.leftmenu .favorite .level1 .level1-li .bookmark-list-box {
+  position: absolute;
+  left: -100%;
 }
-.leftmenu .favorite ul li:hover ul {
+.leftmenu .favorite .level1 .level1-li:hover .lastest-list-box, .leftmenu .favorite .level1 .level1-li:hover .bookmark-list-box {
   left: 100%;
   margin-top: -36px;
   font-size: 14px;
   word-break: break-all;
-  z-index: 999;
+  z-index: 9;
 }
-.leftmenu .favorite ul li .icon_span {
-  margin-left: 20px;
-  color: #1141a3;
-  font-size: 1.5em;
-  vertical-align: middle;
+.leftmenu .favorite .level1 .level1-li ul li a {
+  background-color: #a0effb;
+  padding-left: 20px;
 }
-.leftmenu .favorite ul li .font_span {
-  margin-left: 10px;
-  color: #1141a3;
-  vertical-align: middle;
-  font-size: 0.9em;
-}
-.leftmenu .favorite ul li a {
+.leftmenu .favorite .level1 .level1-li a {
   display: block;
   width: 210px;
   color: #44484f;
@@ -167,29 +161,37 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   height: 36px;
   border-bottom: 1px solid #caccce;
 }
-.leftmenu .favorite ul li a:hover {
+.leftmenu .favorite .level1 .level1-li a .icon_span {
+  margin-left: 20px;
+  color: #1141a3;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+.leftmenu .favorite .level1 .level1-li a .font_span {
+  margin-left: 10px;
+  color: #1141a3;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+.leftmenu .favorite .level1 .level1-li a:hover {
   background: #1141a3;
   color: #fff;
 }
-.leftmenu .favorite ul li a:hover .icon_span {
+.leftmenu .favorite .level1 .level1-li a:hover .icon_span {
   color: #ffffff;
 }
-.leftmenu .favorite ul li a:hover .font_span {
+.leftmenu .favorite .level1 .level1-li a:hover .font_span {
   color: #ffffff;
-}
-.leftmenu .favorite ul li ul li a {
-  background-color: #a0effb;
-  padding-left: 20px;
 }
 .leftmenu .side-menu {
   width: 100%;
   position: absolute;
   top: 72px;
 }
-.leftmenu .side-menu > li {
-  font-size: 15px;
+.leftmenu .side-menu li.step01 {
+  font-size: 1em;
 }
-.leftmenu .side-menu > li > a {
+.leftmenu .side-menu li.step01 > a {
   display: block;
   background-color: #d9dde2;
   color: #44484f;
@@ -198,53 +200,51 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   word-break: break-all;
   font-weight: bold;
 }
-.leftmenu .side-menu > li > a.open {
-  display: block;
+.leftmenu .side-menu li.step01 > a.open {
   background-color: #023562;
   color: #fff;
   font-weight: bold;
-  padding: 8px 5px 8px 20px;
 }
-.leftmenu .side-menu > li > a:hover {
-  display: block;
+.leftmenu .side-menu li.step01 > a:hover {
   background-color: #023562;
   color: #fff !important;
   font-weight: bold;
-  padding: 8px 5px 8px 20px;
 }
-.leftmenu .side-menu > li ul li a.open2 {
-  color: #f2f2f2;
-  background-color: #1b73bb;
+.leftmenu .side-menu li.step01 ul.step02 li.step02 > a {
   padding: 7px 5px 7px 40px;
 }
-.leftmenu .side-menu > li ul li a:hover {
+.leftmenu .side-menu li.step01 ul.step02 li.step02 > a.open2 {
+  color: #f2f2f2;
+  background-color: #1b73bb;
+}
+.leftmenu .side-menu li.step01 ul.step02 li.step02 > a:hover {
   color: #f2f2f2 !important;
   background-color: #1b73bb;
-  padding: 7px 5px 7px 40px;
 }
-.leftmenu .side-menu > li ul li ul li a.open3 {
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a {
+  padding: 7px 5px 7px 55px;
+}
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a.open3 {
   color: #f2f2f2;
   display: block;
   background-color: #1b73bb;
-  padding: 7px 5px 7px 55px;
   font-size: 13px;
 }
-.leftmenu .side-menu > li ul li ul li a:hover {
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a:hover {
   color: #f29b12 !important;
-  background-color: #1b73bb;
+}
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a {
   padding: 7px 5px 7px 55px;
 }
-.leftmenu .side-menu > li ul li ul li a ul li a.open4 {
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a.open4 {
   color: #f2f2f2;
   display: block;
   background-color: #1b73bb;
-  padding: 7px 5px 7px 55px;
   font-size: 13px;
 }
-.leftmenu .side-menu > li ul li ul li a ul li a:hover {
+.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a:hover {
   color: #f29b12 !important;
   background-color: #1b73bb;
-  padding: 7px 5px 7px 70px;
 }
 
 /* 메뉴 전체 스타일 */
@@ -298,7 +298,7 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   position: absolute;
   left: 500px;
   top: 250px;
-  display: block;
+  display: none;
   z-index: 6;
 }
 
@@ -348,6 +348,10 @@ nth .favorit .btnFavoritWrap {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+body {
+  font-size: 14px;
+}
+
 ol,
 ul,
 li {
@@ -366,7 +370,7 @@ a {
 
 table {
   border-collapse: collapse;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .point {
@@ -458,6 +462,7 @@ table {
   color: #fff;
   background-color: #142759;
   padding-left: 10px;
+  font-size: 1em;
 }
 .container .processing-doc table {
   width: 100%;
@@ -503,7 +508,7 @@ table {
   color: #000;
 }
 .container .progress-rate .sub-gnb article a span {
-  font-size: 15px;
+  font-size: 1em;
 }
 .container .progress-rate .sub-gnb article a div {
   display: flex;
@@ -567,7 +572,7 @@ wrapper .container .progress-rate .sub-gnb article a div b.num {
 .container .processing-wait table tr th,
 .container .processing-wait table tr td {
   border: 1px solid #828282;
-  font-size: 15px;
+  font-size: 1em;
 }
 .container .processing-wait table tr th {
   background-color: #f0f3fa;

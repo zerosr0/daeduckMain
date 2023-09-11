@@ -1,17 +1,28 @@
 //leftmenu accordion
 $(function () {
-  //my job 부분은 보이게
+  //화면 로드 시 MYJOB 부분은 펼쳐있고, MYJOB현황은 open2 스타일적용 
   $('ul.step02').eq(0).show();
+  $('li.step02 a').eq(0).addClass('open2');
 
-  $('li.step01').on("click", function () {
-    $(this).children('ul.step02').slideToggle(150);
-    $(this).children('a').toggleClass('open');
-    // $(!this).children('ul.step02').hide();
-    // $(this).parent('.step01').slideUp();
-    // $(this).next().stop().slideToggle();
+  //첫번째 메뉴를 클릭하면 open 스타일 적용되게, open 스타일이 적용되어 있다면 그 하위메뉴 펼쳐지게
+  $('li.step01 a').on("click", function () {
+    $(this).siblings('ul.step02').next().stop().slideDown(150);
+    $(this).toggleClass('open');
+    $(this).siblings('ul.step02').slideUp();
+    $(!this).removeClass('open'); //TODO
   })
-  $('li.step02').on("click", function () {
-    $(this).children('ul.step03').slideToggle();
+
+  //두번째 메뉴를 클릭하면 open2 스타일 적용되고 그 하위메뉴 펼쳐지게
+  $('li.step02 a').on("click", function () {
+    $('li.step02 a').eq(0).removeClass('open2');
+    $(this).toggleClass('open2');
+    $(this).siblings('ul.step03').slideToggle(150);
+    // $(!this).children('ul.step03').hide();
+  })
+
+  $('li.step03 a').on("click", function () {
+    $(this).addClass('open3');
+    $(!this).removeClass('open3');
   })
 
   let sec_height = $('.tableFrame .tableSection').height;

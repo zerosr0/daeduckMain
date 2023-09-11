@@ -126,6 +126,7 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   left: 0;
   z-index: 4;
   background-color: #d9dde2;
+  transition: 0.5s;
 }
 .leftmenu .favorite {
   position: relative;
@@ -210,39 +211,39 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   color: #fff !important;
   font-weight: bold;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 > a {
+.leftmenu .side-menu ul.step02 li.step02 > a {
   padding: 7px 5px 7px 40px;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 > a.open2 {
+.leftmenu .side-menu ul.step02 li.step02 > a.open2 {
   color: #f2f2f2;
   background-color: #1b73bb;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 > a:hover {
+.leftmenu .side-menu ul.step02 li.step02 > a:hover {
   color: #f2f2f2 !important;
   background-color: #1b73bb;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a {
+.leftmenu .side-menu ul.step02 ul li a {
   padding: 7px 5px 7px 55px;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a.open3 {
+.leftmenu .side-menu ul.step02 ul li a.open3 {
   color: #f2f2f2;
   display: block;
   background-color: #1b73bb;
   font-size: 13px;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a:hover {
+.leftmenu .side-menu ul.step02 ul li a:hover {
   color: #f29b12 !important;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a {
+.leftmenu .side-menu ul.step02 ul li a ul li a {
   padding: 7px 5px 7px 55px;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a.open4 {
+.leftmenu .side-menu ul.step02 ul li a ul li a.open4 {
   color: #f2f2f2;
   display: block;
   background-color: #1b73bb;
   font-size: 13px;
 }
-.leftmenu .side-menu li.step01 ul.step02 li.step02 ul li a ul li a:hover {
+.leftmenu .side-menu ul.step02 ul li a ul li a:hover {
   color: #f29b12 !important;
   background-color: #1b73bb;
 }
@@ -424,8 +425,15 @@ table {
   content: "";
   clear: both;
 }
+.container.active #snb .leftmenu {
+  left: -100%;
+}
+.container.active .iframe {
+  padding-left: 0;
+}
 .container .iframe {
   padding-left: 210px;
+  transition: 0.5s;
 }
 .container .iframe .main-gnb {
   margin-bottom: 10px;

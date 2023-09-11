@@ -81,8 +81,19 @@ table {
 		content: "";
 		clear: both;
 	}
+	&.active {
+		#snb {
+			.leftmenu {
+				left: -100%;
+			}
+		}
+		.iframe {
+			padding-left: 0;
+		}
+	}
 	.iframe {
 		padding-left: 210px;
+		transition: 0.5s;
 		.main-gnb {
 			margin-bottom: 10px;
 			ul {

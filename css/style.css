@@ -123,10 +123,10 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
   width: 210px;
   height: 100vh;
   top: 60px;
-  left: 0;
+  left: -100%;
   z-index: 4;
   background-color: #d9dde2;
-  transition: 0.5s;
+  transition: 1s;
 }
 .leftmenu .favorite {
   position: relative;
@@ -246,6 +246,32 @@ header .header-container .gnb-wrap #gnb-mobile > ul {
 .leftmenu .side-menu ul.step02 ul li a ul li a:hover {
   color: #f29b12 !important;
   background-color: #1b73bb;
+}
+.leftmenu .slide-btn {
+  position: absolute;
+  left: 100%;
+  top: 20%;
+  background-color: #1b73bb;
+  width: 15px;
+  height: 60px;
+  border-radius: 0 5px 5px 0;
+  z-index: 4;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.leftmenu .slide-btn:hover {
+  background-color: #1141a3;
+}
+.leftmenu .slide-btn.active {
+  display: flex;
+}
+.leftmenu .slide-btn .fa-caret-up {
+  font-size: 15px;
+  color: #fff;
+  transform: rotate(270deg);
 }
 
 /* 메뉴 전체 스타일 */
@@ -426,14 +452,14 @@ table {
   clear: both;
 }
 .container.active #snb .leftmenu {
-  left: -100%;
+  left: 0;
 }
 .container.active .iframe {
-  padding-left: 0;
+  padding-left: 220px;
 }
 .container .iframe {
-  padding-left: 210px;
-  transition: 0.5s;
+  padding-left: 15px;
+  transition: 1s;
 }
 .container .iframe .main-gnb {
   margin-bottom: 10px;
@@ -586,9 +612,6 @@ wrapper .container .progress-rate .sub-gnb article a div b.num {
   background-color: #f0f3fa;
 }
 .container .processing-wait table tr td {
-  cursor: pointer;
-}
-.container .notice {
   cursor: pointer;
 }
 .container .notice .notice-wrapper {

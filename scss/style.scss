@@ -84,16 +84,16 @@ table {
 	&.active {
 		#snb {
 			.leftmenu {
-				left: -100%;
+				left: 0;
 			}
 		}
 		.iframe {
-			padding-left: 0;
+			padding-left: 220px;
 		}
 	}
 	.iframe {
-		padding-left: 210px;
-		transition: 0.5s;
+		padding-left: 15px;
+		transition: 1s;
 		.main-gnb {
 			margin-bottom: 10px;
 			ul {
@@ -259,7 +259,6 @@ table {
 		}
 	}
 	.notice {
-		cursor: pointer;
 		.notice-wrapper {
 			height: 200px;
 			border: 1px solid #828282;

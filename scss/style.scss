@@ -75,7 +75,7 @@ table {
 .container {
 	width: 100%;
 	height: 100%;
-	padding: 70px 10px 0px;
+	padding: 70px 10px 0;
 	&::after {
 		display: block;
 		content: "";
@@ -92,7 +92,7 @@ table {
 		}
 	}
 	.iframe {
-		padding-left: 15px;
+		padding-left: 0;
 		transition: 1s;
 		.main-gnb {
 			margin-bottom: 10px;
@@ -107,7 +107,7 @@ table {
 					background-color: #899fce;
 					box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 					&:hover {
-						background-color: #b5bfd2;
+						background-color: #6083d0;
 					}
 					a {
 						display: flex;
@@ -143,6 +143,7 @@ table {
 					th,
 					td {
 						border: 1px solid #828282;
+						padding: 8.5px;
 					}
 					td {
 						cursor: pointer;
@@ -220,13 +221,14 @@ table {
 					justify-content: space-evenly;
 					color: #000;
 					height: 100%;
-					p {
+					span {
+						display: block;
 						width: 70%;
 						height: 20px;
 						background-color: #d7dae4;
 						border-radius: 5px;
 						text-align: center;
-						font: 15px/20px "Noto Sans KR", sans-serif;
+						font: 14px/20px "Noto Sans KR", sans-serif;
 					}
 					b {
 						font-size: 20px;
@@ -466,24 +468,33 @@ table {
 
 @media screen and (max-width: 1450px) {
 	.container {
-		.main-gnb {
-			ul {
-				gap: 15px;
+		padding: 120px 10px 0;
+		.iframe {
+			.main-gnb {
+				ul {
+					gap: 15px;
+				}
 			}
 		}
 		.processing-doc {
 			table {
-				font-size: 14px;
+				tbody {
+					tr {
+						th,
+						td {
+							padding: 8px 5px;
+						}
+					}
+				}
 			}
 		}
 		.progress-rate {
 			.sub-gnb {
-				gap: 5px;
 				article {
 					a {
 						div {
 							img {
-								height: 23px;
+								transform: scale(0.9);
 							}
 						}
 					}
@@ -512,7 +523,7 @@ table {
 		.notice {
 			.notice-wrapper {
 				table {
-					font-size: 14px;
+					font-size: 1em;
 				}
 			}
 		}
@@ -521,7 +532,7 @@ table {
 			.sub-gnb {
 				article {
 					span {
-						font-size: 14px;
+						font-size: 1em;
 						margin-top: 10px;
 					}
 					a {
@@ -557,7 +568,7 @@ table {
 	}
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1250px) {
 	.wrapper {
 		width: 100%;
 		margin-bottom: 5px;
@@ -570,15 +581,19 @@ table {
 
 @media screen and (max-width: 1100px) {
 	.container {
-		.main-gnb {
-			ul {
-				gap: 10px;
-				li {
-					a {
-						font-size: 14px;
-						flex-direction: column;
-						img {
-							width: 25px;
+		.iframe {
+			.main-gnb {
+				ul {
+					flex-wrap: wrap;
+					justify-content: flex-start;
+					li {
+						width: 23%;
+						flex: auto;
+						a {
+							font-size: 14px;
+							img {
+								width: 25px;
+							}
 						}
 					}
 				}

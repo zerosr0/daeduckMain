@@ -27,6 +27,10 @@
   <header>
     <div class="header-container">
       <a class="logo-img" href="index.html"><img src="./image/logo.jpg" alt="logo image"></a>
+      <div class="search">
+        <input type="search" name="" id="">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
       <div class="gnb-wrap">
         <div class="admin">
           <p>[정보기술팀] <strong>운영자dev님 환영합니다!</strong></p>
@@ -887,34 +891,19 @@
           <table>
             <caption class="hidden">처리대기문서</caption>
             <tbody>
-              <colgroup>
-                <col style="width: 100px;">
-              </colgroup>
               <tr class="bg-color">
-                <th rowspan="2" style="width:100px">업무구분</th>
-                <th colspan="5">APQP</th>
-                <th rowspan="2">오픈<br>이슈</th>
-                <th rowspan="2">NCR<br>이슈</th>
-                <th rowspan="2">과거<br>품질</th>
-                <th rowspan="2">개발<br>표준<br>관리</th>
-                <th rowspan="2">심사<br>관리</th>
-                <th rowspan="2">특허<br>관리</th>
-                <th rowspan="2">회의록</th>
+                <th>업무구분</th>
+                <th>APQP</th>
+                <th>오픈<br>이슈</th>
+                <th>NCR<br>이슈</th>
+                <th>과거<br>품질</th>
+                <th>개발<br>표준 관리</th>
+                <th>심사<br>관리</th>
+                <th>회의록</th>
               </tr>
-              <tr>
-                <th>M(Q)</th>
-                <th>M(S)</th>
-                <th>P(Q)</th>
-                <th>P(S)</th>
-                <th style="width: 50px;">D</th>
-              </tr>
+
               <tr onclick="location.href='#'">
                 <td>개인 미처리</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -932,19 +921,9 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
               </tr>
               <tr onclick="location.href='#'">
                 <td>부서 미처리</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -989,22 +968,22 @@
           <div class="sub-gnb">
             <article>
               <a href="#">
-                <p>주간 Activity</p><b>82</b>
+                <span>주간 Activity</span><b>82</b>
               </a>
             </article>
             <article>
               <a href="#">
-                <p>당일 Activity</p><b>12</b>
+                <span>당일 Activity</span><b>12</b>
               </a>
             </article>
             <article>
               <a href="#">
-                <p>주간이슈발생</p><b class="point">8</b>
+                <span>주간이슈발생</span><b class="point">8</b>
               </a>
             </article>
             <article>
               <a href="#">
-                <p>개선조치대상</p><b>6</b>
+                <span>개선조치대상</span><b>6</b>
               </a>
             </article>
           </div>
@@ -1127,9 +1106,9 @@
             <article><span>심사관리</span><a href="#"><img src="image/심사관리.png" alt=""><b>0건</b></a></article>
           </div>
           <div class="sub-gnb-customer">
-            <article><a href="#"><img src="image/개발포탈메뉴얼.png" alt="">개발포탈 메뉴얼</a></article>
+            <article><a href="#"><img src="image/개발포탈메뉴얼.png" alt="">메뉴얼</a></article>
             <article><a href="#"><img src="image/장애처리게시판.png" alt="">장애처리 게시판</a></article>
-            <article><a href="#"><img src="image/qna게시판.png" alt="">Q&A 게시판</a></article>
+            <article><a href="#"><img src="image/qna게시판.png" alt="">자료실</a></article>
             <article><a href="#"><img src="image/회의록.png" alt="">회의록</a></article>
           </div>
         </div>

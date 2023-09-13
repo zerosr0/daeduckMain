@@ -39,7 +39,7 @@ $(function () {
     let index = $(this).index();
     $('.side-menu > li > ul').eq(index).slideDown(150);
     $('.side-menu > li > ul').not($('.side-menu > li > ul').eq(index)).slideUp(150);
-    $('.container').toggleClass('active');
+    $('.container').addClass('active');
     $('.slide-btn').addClass('active');
   })
 

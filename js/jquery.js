@@ -1,5 +1,10 @@
-//leftmenu accordion
+
 $(function () {
+  //topmenu 메뉴명 클릭시 세부메뉴 나타남
+  $('.sub-menu1 ul li').on("click", function () {
+    $(this).next('.sub-menu2').slideToggle();
+  })
+
   //화면 로드 시 MYJOB 부분은 펼쳐있고, MYJOB현황은 open2 스타일적용 
   // $('ul.step02').eq(0).show();
   $('li.step02 a').eq(0).addClass('open2');

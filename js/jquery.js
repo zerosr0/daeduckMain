@@ -14,7 +14,7 @@ $(function () {
     $('li.step02 a').removeClass('open2');
     $(this).next().stop().slideToggle(150);
     $(this).parent('li.step01').siblings('li.step01').children('ul.step02').slideUp();
-    $(this).addClass('open');
+    $(this).toggleClass('open');
     $(this).parent('li.step01').siblings('li.step01').children('a').removeClass('open');
   })
 
@@ -47,6 +47,9 @@ $(function () {
   //slide-btn 누르면 leftmenu 숨김처리
   $('.slide-btn').on("click", function () {
     $('.container').removeClass('active');
+    $('.side-menu > li > a').removeClass('open');
+    $('li.step02 a').removeClass('open2');
+    $('li.step03 a').removeClass('open3');
   })
 })
 

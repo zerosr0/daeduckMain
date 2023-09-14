@@ -33,19 +33,15 @@ $(function () {
     $(this).parent('li.step03').siblings('li.step03').children('a').removeClass('open3');
   })
 
-  let sec_height = $('.tableFrame .tableSection').height;
-  let td_height = $('.tableFrame .tableSection .td').height;
-
-
-  $('.tableFrame .tableSection .th').css('height', sec_height + 'px');
-
   //대메뉴 클릭시 왼쪽 사이드 메뉴 하위메뉴 toggle
   $('.main-gnb > ul > li').on("click", function () {
     let index = $(this).index();
     $('.side-menu > li > ul').eq(index).slideDown(150);
     $('.side-menu > li > ul').not($('.side-menu > li > ul').eq(index)).slideUp(150);
     $('.container').addClass('active');
-    $('.slide-btn').addClass('active');
+    $('.side-menu > li > a').eq(index).addClass('open');
+    $('.side-menu > li > a').not($('.side-menu > li > a').eq(index)).removeClass('open');
+
   })
 
   //slide-btn 누르면 leftmenu 숨김처리

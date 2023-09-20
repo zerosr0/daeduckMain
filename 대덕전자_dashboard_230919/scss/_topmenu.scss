@@ -1,0 +1,320 @@
+header {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	height: 100px;
+	border-bottom: 5px solid #142759;
+	background-color: #fff;
+	.header-container {
+		position: relative;
+		height: 100%;
+		.logo-img {
+			float: left;
+			display: block;
+			position: relative;
+			width: 163px;
+			height: 50px;
+			margin-left: 22px;
+			margin-top: 20px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.header-2f {
+			position: relative;
+			float: right;
+			width: calc(100% - 230px);
+			height: 50%;
+			display: flex;
+			.search {
+				display: inline-flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 250px;
+				gap: 5px;
+				border: 2px solid #282828;
+				border-radius: 50px;
+				padding: 0 13px;
+				margin: 5px auto;
+				input {
+					width: 200px;
+					height: 30px;
+					border: none;
+					&:focus {
+						outline: none;
+					}
+				}
+				.fa-magnifying-glass {
+					font-size: 18px;
+				}
+			}
+			.gnb-wrap {
+				position: relative;
+				float: right;
+				display: inline-flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: 75%;
+				gap: 30px;
+				.admin {
+					text-align: right;
+					font-size: 14px;
+				}
+				// header gnb menu
+				#gnb {
+					.sub-menu0 {
+						font-size: 14px;
+						//관리자, 회의록 등 첫번째 li
+						> li {
+							position: relative;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100px;
+							height: 95%;
+							a {
+								color: #282828;
+							}
+							//첫번째 li를 hover 했을 때
+							&:hover {
+								background: #e6eaef;
+								.sub-menu1 {
+									display: flex;
+									ul li:hover {
+										.sub-menu2 {
+											display: block;
+										}
+										> a {
+											color: #337ab7;
+										}
+									}
+								}
+							}
+							//기본정보관리, 코드정보관리 등 두번째 li
+							.sub-menu1 {
+								display: none;
+								position: absolute;
+								z-index: 4;
+								flex-direction: column;
+								top: 48px;
+								left: 0;
+								width: 190px;
+								background: #e6eaef;
+								ul {
+									li {
+										position: relative;
+										padding: 10px;
+										border: 1px solid #d2d5d8;
+										border-top: none;
+										a i {
+											position: absolute;
+											right: 10px;
+											top: 13px;
+										}
+										//고객사관리, 사용자관리 등 세번째 li
+										.sub-menu2 {
+											position: absolute;
+											left: 189px;
+											top: -1px;
+											display: none;
+											width: 200px;
+											background: #e6eaef;
+										}
+										&:nth-of-type(1) {
+											border-top: 1px solid #d2d5d8;
+										}
+										ul {
+											li a {
+												font-size: 14px;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				//TODO : 반응형 모바일 - 정리하기
+				#gnb-mobile {
+					display: none;
+					position: relative;
+					width: 45%;
+					.sub-menu0 {
+						> li {
+							width: 100%;
+							> a {
+								font-size: 20px;
+								width: 100%;
+								height: 100%;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								color: #142759;
+								&:hover {
+									color: #4a4944;
+									background-color: #e6eaef;
+									~ .sub-menu1 {
+										display: block;
+									}
+								}
+							}
+							.sub-menu1 {
+								display: none;
+								position: absolute;
+								top: 50px;
+								left: 0;
+								width: 250px;
+								background: #e6eaef;
+								z-index: 10;
+								ul {
+									> li {
+										padding: 10px;
+										border-bottom: 1px solid #d2d5d8;
+										a {
+											display: flex;
+											justify-content: space-between;
+											align-content: center;
+											margin: auto 20px;
+											font-size: 1.1em;
+											color: #142759;
+											.fa-plus {
+												margin-top: 4px;
+											}
+										}
+									}
+									.sub-menu2 {
+										display: none;
+										width: 100%;
+										background: #fff;
+										transition: opacity 0.5s;
+										ul li {
+											padding: 5px 10px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				#gnb > ul,
+				#gnb-mobile > ul {
+					height: 50px;
+					display: flex;
+				}
+			}
+		}
+		.header-1f {
+			float: right;
+			width: calc(100% - 230px);
+			height: 50%;
+			.main-gnb {
+				margin: 0 10px 10px 0;
+				border: 1px solid #282828;
+				ul {
+					display: flex;
+					justify-content: space-between;
+					gap: 30px;
+					box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+					li {
+						flex: 1;
+						height: 40px;
+						&:hover {
+							background-color: #6083d0;
+							a {
+								color: #fff;
+							}
+						}
+						a {
+							display: flex;
+							justify-content: space-evenly;
+							align-items: center;
+							height: 100%;
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	header {
+		.header-container {
+			flex-direction: column;
+			.header-2f {
+				.search {
+					width: 220px;
+					input {
+						width: 165px;
+					}
+				}
+				.gnb-wrap {
+					gap: 10px;
+				}
+			}
+			.header-1f {
+				.main-gnb {
+					ul {
+						gap: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1250px) {
+	header {
+		height: 150px;
+		.header-container {
+			.logo-img {
+				margin-top: 45px;
+			}
+			.header-2f {
+				height: 34%;
+				.gnb-wrap {
+					width: 50%;
+					.admin {
+						display: none;
+					}
+					#gnb {
+						display: none;
+					}
+					#gnb-mobile {
+						display: block;
+						width: 100%;
+						.sub-menu0 li:hover .sub-menu1 {
+							display: block;
+						}
+					}
+				}
+			}
+			.header-1f {
+				height: 66%;
+				.main-gnb {
+					margin: 0 10px 0 0;
+					ul {
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						li {
+							width: 22%;
+							max-height: 38px;
+							flex: auto;
+							a {
+								font-size: 14px;
+								img {
+									width: 25px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
